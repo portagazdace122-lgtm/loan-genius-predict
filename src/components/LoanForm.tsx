@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -49,13 +50,18 @@ export const LoanForm = ({ onSubmit, isLoading }: LoanFormProps) => {
   };
 
   return (
-    <Card className="w-full shadow-md">
-      <CardHeader>
-        <CardTitle className="text-2xl">Loan Application</CardTitle>
-        <CardDescription>Fill in your details to check loan eligibility</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-6">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <Card className="w-full shadow-lg border-2 hover:shadow-xl transition-all duration-300">
+        <CardHeader className="bg-gradient-to-r from-primary/5 to-secondary/5">
+          <CardTitle className="text-3xl">Loan Application</CardTitle>
+          <CardDescription className="text-base">Fill in your details to check loan eligibility instantly</CardDescription>
+        </CardHeader>
+        <CardContent className="pt-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="gender">Gender</Label>
@@ -200,15 +206,21 @@ export const LoanForm = ({ onSubmit, isLoading }: LoanFormProps) => {
             </div>
           </div>
 
-          <Button 
-            type="submit" 
-            className="w-full bg-gradient-primary hover:opacity-90 transition-opacity text-lg py-6"
-            disabled={isLoading}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            {isLoading ? "Analyzing..." : "Check Loan Eligibility"}
-          </Button>
+            <Button 
+              type="submit" 
+              className="w-full bg-gradient-primary hover:opacity-90 transition-all duration-300 text-lg py-6 shadow-md hover:shadow-lg"
+              disabled={isLoading}
+            >
+              {isLoading ? "Analyzing..." : "Check Loan Eligibility"}
+            </Button>
+          </motion.div>
         </form>
       </CardContent>
     </Card>
+    </motion.div>
   );
 };
