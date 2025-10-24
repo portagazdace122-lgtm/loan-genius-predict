@@ -26,19 +26,7 @@ export const About = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground text-lg">
               <p>
-                LoanPredict AI is a cutting-edge loan approval prediction system powered by
-                advanced machine learning algorithms. Our platform analyzes multiple factors
-                to provide accurate, instant loan eligibility predictions.
-              </p>
-              <p>
-                Built on a foundation of extensive financial data and trained on thousands
-                of real loan applications, our AI model achieves an impressive 89% accuracy
-                rate in predicting loan outcomes.
-              </p>
-              <p>
-                We believe in transparency and fairness. Every prediction comes with a
-                detailed breakdown of contributing factors, helping applicants understand
-                their financial profile and make informed decisions.
+                AI-powered loan prediction using advanced machine learning to provide instant, accurate approval predictions.
               </p>
             </div>
 

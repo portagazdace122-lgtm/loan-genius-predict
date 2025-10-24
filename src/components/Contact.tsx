@@ -12,8 +12,8 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Call Us",
-    content: "+1 (555) 123-4567",
-    description: "Mon-Fri, 9AM-6PM EST",
+    content: "+91 40 1234 5678",
+    description: "Mon-Fri, 9AM-6PM IST",
   },
   {
     icon: MessageSquare,
@@ -24,7 +24,7 @@ const contactMethods = [
   {
     icon: MapPin,
     title: "Visit Us",
-    content: "123 Finance Street, NY 10001",
+    content: "Banjara Hills, Hyderabad 500034",
     description: "By appointment only",
   },
 ];

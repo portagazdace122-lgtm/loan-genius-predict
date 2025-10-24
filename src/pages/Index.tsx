@@ -8,6 +8,7 @@ import { Features } from "@/components/Features";
 import { ModelInsights } from "@/components/ModelInsights";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
 import { predictLoanApproval } from "@/utils/loanPrediction";
 import { Button } from "@/components/ui/button";
@@ -152,47 +153,7 @@ const Index = () => {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="border-t mt-16 py-12 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="p-2 bg-gradient-primary rounded-lg">
-                  <Building2 className="h-5 w-5 text-white" />
-                </div>
-                <span className="font-bold text-lg">LoanPredict AI</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Advanced machine learning algorithms for accurate loan approval predictions.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#features" className="hover:text-primary transition-colors">Features</a></li>
-                <li><a href="#insights" className="hover:text-primary transition-colors">Insights</a></li>
-                <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
-                <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Cookie Policy</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2025 LoanPredict AI. Powered by advanced machine learning algorithms.</p>
-            <p className="mt-2">
-              This is a demonstration system. Predictions are simulated and for educational purposes only.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -72,6 +72,7 @@ export const LoanForm = ({ onSubmit, isLoading }: LoanFormProps) => {
                 <SelectContent>
                   <SelectItem value="Male">Male</SelectItem>
                   <SelectItem value="Female">Female</SelectItem>
+                  <SelectItem value="Others">Others</SelectItem>
                 </SelectContent>
               </Select>
             </div>
